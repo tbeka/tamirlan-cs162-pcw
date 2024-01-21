@@ -1,0 +1,48 @@
+import requests
+from requests.auth import HTTPBasicAuth
+import json
+import uuid
+from PIL import Image
+from io import BytesIO
+
+def login_with_basic_auth():
+    print("Task 1: Log in using basic auth")
+    url = "https://httpbin.org/basic-auth/user/passwd"
+    response = requests.get(url, auth=HTTPBasicAuth('user', 'passwd'))
+    print("Request URL:", response.request.url)
+    print("Response Status Code:", response.status_code)
+    print("Response Text:", response.text)
+    print("------")
+
+def download_image():
+    print("Task 2: Download an image")
+    url = "https://httpbin.org/image/png"
+    response = requests.get(url)
+    print("Request URL:", response.request.url)
+    print("Response Status Code:", response.status_code)
+
+    # Displaying the image (for learning purposes, not required for the task)
+    image = Image.open(BytesIO(response.content))
+    image.show()
+    print("------")
+
+def generate_uuid():
+    print("Task 3: Generate a UUID4")
+    generated_uuid = str(uuid.uuid4())
+    print("Generated UUID:", generated_uuid)
+    print("------")
+
+def simple_json_response():
+    print("Task 4: Return a simple JSON response")
+    url = "https://httpbin.org/json"
+    response = requests.get(url)
+    print("Request URL:", response.request.url)
+    print("Response Status Code:", response.status_code)
+    print("Response JSON:", json.dumps(response.json(), indent=2))
+    print("------")
+
+if __name__ == "__main__":
+    login_with_basic_auth()
+    download_image()
+    generate_uuid()
+    simple_json_response()
