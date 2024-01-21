@@ -21,11 +21,6 @@ def download_image():
     print("Request URL:", response.request.url)
     print("Response Status Code:", response.status_code)
 
-    # Displaying the image (for learning purposes, not required for the task)
-    image = Image.open(BytesIO(response.content))
-    image.show()
-    print("------")
-
 def generate_uuid():
     print("Task 3: Generate a UUID4")
     generated_uuid = str(uuid.uuid4())
