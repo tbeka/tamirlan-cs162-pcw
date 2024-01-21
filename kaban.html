@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -8,13 +8,10 @@
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
       rel="stylesheet" />
-
-    <link rel="stylesheet" href="kaban.css" />
+    
   </head>
 
   <body>
-    <!-- Here is our main header that is used across all the pages of our website -->
-
     <header>
       <h1>Header</h1>
     </header>
@@ -24,28 +21,38 @@
         <li><a href="#">Kaban Board</a></li>
         <li><a href="#">Log out</a></li>
       </ul>
+    </nav>
 
+    <form>
+      <label for="taskName">Task Name:</label>
+      <input type="text" id="taskName" name="taskName" required><br>
 
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" name="duration" required><br>
 
-    <!-- Here is our page's main content -->
+      <label for="description">Short Description:</label>
+      <textarea id="description" name="description" required></textarea><br>
+
+      <input type="submit" value="Add Task">
+    </form>
+
     <table>
-    <colgroup span="4"></colgroup>
-    <tr>
-        <th>Backlog </th>
+      <colgroup span="4"></colgroup>
+      <tr>
+        <th>Backlog</th>
         <th>To do</th>
         <th>Doing</th>
-        <th>Verify </th>
+        <th>Verify</th>
         <th>Done</th>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>Eat cookies</td>
         <td>Conquer the world</td>
         <td>Conquer the US</td>
         <td>Bought nuclear weapon</td>
         <td>Bought Taylor Swift tickets</td>
-    </tr>
+      </tr>
     </table>
-    <!-- And here is our main footer that is used across all the pages of our website -->
 
     <footer>
       <p>©Copyright 2050 by Tamirlan Bektemissov. All rights reversed.</p>
