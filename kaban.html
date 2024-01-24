@@ -1,61 +1,131 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
 
-    <title>My page title</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
-      rel="stylesheet" />
-    
-  </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page Title</title>
+    <style>
+        /* Apply a basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <body>
+        body {
+            font-family: 'Open Sans Condensed', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Sonsie One', cursive;
+        }
+
+        nav ul {
+            list-style: none;
+            background: #555;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background: #444;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            /* Removed position: absolute and bottom: 0; for a normal footer */
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
     <header>
-      <h1>Header</h1>
+        <h1>Header</h1>
     </header>
 
     <nav>
-      <ul>
-        <li><a href="#">Kaban Board</a></li>
-        <li><a href="#">Log out</a></li>
-      </ul>
+        <ul>
+            <li><a href="#">Kaban Board</a></li>
+            <li><a href="#">Log out</a></li>
+        </ul>
     </nav>
 
-    <form>
-      <label for="taskName">Task Name:</label>
-      <input type="text" id="taskName" name="taskName" required><br>
+    <form method="post" action="/submit">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" name="taskName" required><br>
 
-      <label for="duration">Duration:</label>
-      <input type="text" id="duration" name="duration" required><br>
+        <label for="duration">Duration:</label>
+        <input type="text" id="duration" name="duration" required><br>
 
-      <label for="description">Short Description:</label>
-      <textarea id="description" name="description" required></textarea><br>
+        <label for="description">Short Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
 
-      <input type="submit" value="Add Task">
+        <input type="submit" value="Add Task">
     </form>
 
     <table>
-      <colgroup span="4"></colgroup>
-      <tr>
-        <th>Backlog</th>
-        <th>To do</th>
-        <th>Doing</th>
-        <th>Verify</th>
-        <th>Done</th>
-      </tr>
-      <tr>
-        <td>Eat cookies</td>
-        <td>Conquer the world</td>
-        <td>Conquer the US</td>
-        <td>Bought nuclear weapon</td>
-        <td>Bought Taylor Swift tickets</td>
-      </tr>
+        <tr>
+            <th>Backlog</th>
+            <th>To do</th>
+            <th>Doing</th>
+            <th>Verify</th>
+            <th>Done</th>
+        </tr>
+        <tr>
+            <td>Eat cookies</td>
+            <td>Conquer the world</td>
+            <td>Conquer the US</td>
+            <td>Bought nuclear weapon</td>
+            <td>Bought Taylor Swift tickets</td>
+        </tr>
     </table>
 
     <footer>
-      <p>©Copyright 2050 by Tamirlan Bektemissov. All rights reversed.</p>
+        <p>©Copyright 2024 by Tamirlan Bektemissov. All rights reversed.</p>
     </footer>
-  </body>
+</body>
+
 </html>
